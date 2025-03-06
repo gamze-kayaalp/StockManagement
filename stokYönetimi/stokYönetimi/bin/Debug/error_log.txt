@@ -1,0 +1,6 @@
+System.Net.Mail.SmtpException: SMTP sunucusu güvenli bir bağlantı gerektiriyor veya istemcinin kimliği doğrulanmadı. Sunucu yanıtı şöyleydi: 5.7.0 Authentication Required. For more information, go to
+   konum: System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   konum: System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   konum: System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   konum: System.Net.Mail.SmtpClient.Send(MailMessage message)
+   konum: stokYönetimi.Form2.button2_Click(Object sender, EventArgs e) C:\Users\hyare\OneDrive\Masaüstü\stokYönetimi\stokYönetimi.PL\Form2.cs içinde: satır 154

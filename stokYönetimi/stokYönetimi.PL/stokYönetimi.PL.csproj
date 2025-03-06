@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9AA17E2B-8E68-4B46-B2EC-B38A97C0811A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>stokYönetimi.PL</RootNamespace>
+    <AssemblyName>stokYönetimi.PL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.6.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.6.0.0\lib\net461\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.6.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.6.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.6.1.1\lib\netstandard2.0\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.6.1.1\lib\netstandard2.0\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Quality, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.6.1.1\lib\netstandard2.0\PdfSharp.Quality.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Snippets, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.6.1.1\lib\netstandard2.0\PdfSharp.Snippets.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.System, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.6.1.1\lib\netstandard2.0\PdfSharp.System.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.WPFonts, Version=6.1.1.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.6.1.1\lib\netstandard2.0\PdfSharp.WPFonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=9.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.9.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.6.0.0\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormCamasirSuyu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCamasirSuyu.Designer.cs">
+      <DependentUpon>FormCamasirSuyu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAtistirmaliklar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAtistirmaliklar.Designer.cs">
+      <DependentUpon>FormAtistirmaliklar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBakliyatlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBakliyatlar.Designer.cs">
+      <DependentUpon>FormBakliyatlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCif.Designer.cs">
+      <DependentUpon>FormCif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCikolata.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCikolata.Designer.cs">
+      <DependentUpon>FormCikolata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCips.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCips.Designer.cs">
+      <DependentUpon>FormCips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDondurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDondurma.Designer.cs">
+      <DependentUpon>FormDondurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFasulye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFasulye.Designer.cs">
+      <DependentUpon>FormFasulye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIcecekler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIcecekler.Designer.cs">
+      <DependentUpon>FormIcecekler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKola.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKola.Designer.cs">
+      <DependentUpon>FormKola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMercimek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMercimek.Designer.cs">
+      <DependentUpon>FormMercimek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNohut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNohut.Designer.cs">
+      <DependentUpon>FormNohut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSoda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSoda.Designer.cs">
+      <DependentUpon>FormSoda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSu.Designer.cs">
+      <DependentUpon>FormSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTemizlik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTemizlik.Designer.cs">
+      <DependentUpon>FormTemizlik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormYagCozucu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormYagCozucu.Designer.cs">
+      <DependentUpon>FormYagCozucu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCamasirSuyu.resx">
+      <DependentUpon>FormCamasirSuyu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAtistirmaliklar.resx">
+      <DependentUpon>FormAtistirmaliklar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBakliyatlar.resx">
+      <DependentUpon>FormBakliyatlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCif.resx">
+      <DependentUpon>FormCif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCikolata.resx">
+      <DependentUpon>FormCikolata.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCips.resx">
+      <DependentUpon>FormCips.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDondurma.resx">
+      <DependentUpon>FormDondurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFasulye.resx">
+      <DependentUpon>FormFasulye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIcecekler.resx">
+      <DependentUpon>FormIcecekler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKola.resx">
+      <DependentUpon>FormKola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMercimek.resx">
+      <DependentUpon>FormMercimek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNohut.resx">
+      <DependentUpon>FormNohut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSoda.resx">
+      <DependentUpon>FormSoda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSu.resx">
+      <DependentUpon>FormSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTemizlik.resx">
+      <DependentUpon>FormTemizlik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormYagCozucu.resx">
+      <DependentUpon>FormYagCozucu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\stokYönetimi.BL\stokYönetimi.BL.csproj">
+      <Project>{ad7cfe96-b35c-4b7c-903e-148afe527182}</Project>
+      <Name>stokYönetimi.BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\stokYönetimi.DAL\stokYönetimi.DAL.csproj">
+      <Project>{05df425f-91a1-4892-8b34-7cbcb71521d5}</Project>
+      <Name>stokYönetimi.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\stokYönetimi.Entities\stokYönetimi.Entities.csproj">
+      <Project>{8d8f19f4-e2b4-4d04-a301-b8db6a6c5a2e}</Project>
+      <Name>stokYönetimi.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 ve x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 </ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets'))" />
+  </Target>
+</Project>

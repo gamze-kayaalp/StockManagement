@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hyare\\OneDrive\\Masa\u00FCst\u00FC\\stokY\u00F6netimi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{05DF425F-91A1-4892-8B34-7CBCB71521D5}|stokY\u00F6netimi.DAL\\stokY\u00F6netimi.DAL.csproj|c:\\users\\hyare\\onedrive\\masa\u00FCst\u00FC\\stoky\u00F6netimi\\stoky\u00F6netimi.dal\\dataacsess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05DF425F-91A1-4892-8B34-7CBCB71521D5}|stokY\u00F6netimi.DAL\\stokY\u00F6netimi.DAL.csproj|solutionrelative:stoky\u00F6netimi.dal\\dataacsess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataAcsess.cs",
+              "DocumentMoniker": "C:\\Users\\hyare\\OneDrive\\Masa\u00FCst\u00FC\\stokY\u00F6netimi\\stokY\u00F6netimi.DAL\\DataAcsess.cs",
+              "RelativeDocumentMoniker": "stokY\u00F6netimi.DAL\\DataAcsess.cs",
+              "ToolTip": "C:\\Users\\hyare\\OneDrive\\Masa\u00FCst\u00FC\\stokY\u00F6netimi\\stokY\u00F6netimi.DAL\\DataAcsess.cs",
+              "RelativeToolTip": "stokY\u00F6netimi.DAL\\DataAcsess.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T01:01:52.28Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
